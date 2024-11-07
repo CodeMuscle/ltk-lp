@@ -24,7 +24,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-row gap-3 items-center justify-start">
                 {socialIcons.map((icon) => (
-                  <Link href={icon.href} key={icon.id}>
+                  <Link key={icon.id} href={icon.href}>
                     <Image
                       src={icon.icon}
                       alt={icon.name}
@@ -54,9 +54,8 @@ const Footer = () => {
             <div className="flex flex-col gap-4 items-start text-black">
               <h2 className="font-semibold text-lg lg:text-xl">Our Company</h2>
               {footerLinks.company.map((link) => (
-                <div className="flex flex-col gap-2 items-start">
+                <div key={link.id} className="flex flex-col gap-2 items-start">
                   <Link
-                    key={link.id}
                     href={link.url}
                     className="font-normal text-base hover:underline hover:underline-offset-1"
                   >
@@ -69,9 +68,8 @@ const Footer = () => {
             <div className="flex flex-col gap-4 items-start text-black">
               <h2 className="font-semibold text-lg lg:text-xl">Your Account</h2>
               {footerLinks.account.map((link) => (
-                <div className="flex flex-col gap-2 items-start">
+                <div key={link.id} className="flex flex-col gap-2 items-start">
                   <Link
-                    key={link.id}
                     href={link.url}
                     className="font-normal text-base hover:underline hover:underline-offset-1"
                   >
