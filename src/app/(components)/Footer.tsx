@@ -25,33 +25,26 @@ const Footer = () => {
               <div className="flex flex-row gap-3 items-center justify-start">
                 {socialIcons.map((icon) => (
                   <Link href={icon.href} key={icon.id}>
-                    <Image src={icon.icon} alt={icon.name} width={20} height={20} />  
+                    <Image
+                      src={icon.icon}
+                      alt={icon.name}
+                      width={20}
+                      height={20}
+                    />
                   </Link>
                 ))}
               </div>
             </div>
           </div>
-          <div className="md:flex md:flex-row items-start md:gap-16 lg:gap-x-36 xl:gap-x-52 grid grid-cols-2 gap-12">        
+          <div className="md:flex md:flex-row items-start md:gap-16 lg:gap-x-36 xl:gap-x-52 grid grid-cols-2 gap-12">
             <div className="flex flex-col gap-4 items-start text-black">
-              <h2 className="font-semibold text-lg lg:text-xl">
-                Main Menu
-              </h2>
+              <h2 className="font-semibold text-lg lg:text-xl">Main Menu</h2>
               {footerLinks.mainMenu.map((link) => (
-                <div className="flex flex-col gap-2 items-start">
-                  <Link key={link.id} href={link.url} className="font-normal text-base hover:underline hover:underline-offset-1">
-                    {link.name}
-                  </Link>
-                </div>
-              ))}
-            </div>
-            
-            <div className="flex flex-col gap-4 items-start text-black">
-              <h2 className="font-semibold text-lg lg:text-xl">
-                Our Company
-              </h2>
-              {footerLinks.company.map((link) => (
-                <div className="flex flex-col gap-2 items-start">
-                  <Link key={link.id} href={link.url} className="font-normal text-base hover:underline hover:underline-offset-1">
+                <div key={link.id} className="flex flex-col gap-2 items-start">
+                  <Link
+                    href={link.url}
+                    className="font-normal text-base hover:underline hover:underline-offset-1"
+                  >
                     {link.name}
                   </Link>
                 </div>
@@ -59,25 +52,41 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-4 items-start text-black">
-              <h2 className="font-semibold text-lg lg:text-xl">
-                Your Account
-              </h2>
-              {footerLinks.account.map((link) => (
+              <h2 className="font-semibold text-lg lg:text-xl">Our Company</h2>
+              {footerLinks.company.map((link) => (
                 <div className="flex flex-col gap-2 items-start">
-                  <Link key={link.id} href={link.url} className="font-normal text-base hover:underline hover:underline-offset-1">
+                  <Link
+                    key={link.id}
+                    href={link.url}
+                    className="font-normal text-base hover:underline hover:underline-offset-1"
+                  >
                     {link.name}
                   </Link>
                 </div>
               ))}
             </div>
-            
+
+            <div className="flex flex-col gap-4 items-start text-black">
+              <h2 className="font-semibold text-lg lg:text-xl">Your Account</h2>
+              {footerLinks.account.map((link) => (
+                <div className="flex flex-col gap-2 items-start">
+                  <Link
+                    key={link.id}
+                    href={link.url}
+                    className="font-normal text-base hover:underline hover:underline-offset-1"
+                  >
+                    {link.name}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-2 items-start justify-start">
           <p className="text-black font-semibold text-base lg:text-lg">
             Payment Accepted
           </p>
-          <Image src={paymentIcon} alt="payment" width={300} height={50} />  
+          <Image src={paymentIcon} alt="payment" width={300} height={50} />
         </div>
       </div>
     </footer>

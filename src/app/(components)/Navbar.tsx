@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { navIcons, navLinks } from "@/app/(data)/navbar";
+import { navLinks } from "@/app/(data)/navbar";
 import Image from "next/image";
 
 import searchIcon from "../../../public/assets/search.svg";
