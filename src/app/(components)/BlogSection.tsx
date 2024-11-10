@@ -14,14 +14,17 @@ const BlogSection = () => {
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex lg:w-2/3">
             {firstBlog && (
-              <div className="flex flex-col gap-3">
-                <Image
-                  src={firstBlog.image}
-                  alt={firstBlog.title}
-                  width={200}
-                  height={200}
-                  style={{ width: "100%" }}
-                />
+              <div className="flex flex-col gap-3 group">
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={firstBlog.image}
+                    alt={firstBlog.title}
+                    width={200}
+                    height={200}
+                    style={{ width: "100%" }}
+                    className="group-hover:scale-[105%] duration-400 transition-all"
+                  />
+                </div>
                 <h3 className="font-semibold text-base lg:text-xl">
                   {firstBlog.title}
                 </h3>
@@ -31,14 +34,20 @@ const BlogSection = () => {
           </div>
           <div className="flex flex-col justify-between gap-6 lg:w-1/2">
             {blogs.slice(1, 4).map((blog) => (
-              <div key={blog.id} className="flex flex-row gap-3 items-start">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  width={500}
-                  height={500}
-                  style={{ width: "100%" }}
-                />
+              <div
+                key={blog.id}
+                className="flex flex-row gap-3 items-start group"
+              >
+                <div className="relative overflow-hidden w-full">
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    width={500}
+                    height={500}
+                    style={{ width: "100%" }}
+                    className="group-hover:scale-[105%] duration-400 transition-all"
+                  />
+                </div>
                 <div className="flex flex-col gap-2">
                   <h3 className="font-semibold text-base lg:text-xl">
                     {blog.title}

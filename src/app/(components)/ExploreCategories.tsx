@@ -3,7 +3,7 @@ import React from "react";
 
 const ExploreCategories = () => {
   return (
-    <section className="w-full my-12 bg-[#D3B67C]">
+    <section className="w-full my-12 bg-categories">
       <div className="lg:py-24 max-w-[90%] mx-auto py-16 flex flex-col gap-3 items-center justify-center">
         <h2 className="font-semibold text-white text-lg lg:text-4xl">
           Explore Categories
