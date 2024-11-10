@@ -52,3 +52,32 @@ export const blogs = [
     image: "/assets/blog4.png",
   },
 ];
+
+export const qualities = [
+  {
+    id: 1,
+    icon: '/assets/preservatives.svg',
+    text: 'No Preservatives',
+  },
+  {
+    id: 2,
+    icon: '/assets/additives.svg',
+    text: 'No Additives',
+  },
+  {
+    id: 3,
+    icon: '/assets/chemicals.svg',
+    text: 'No Chemicals',
+  },
+];
+
+export const bestSellers = [
+  {
+    id: 1,
+    image: '',
+    name: '',
+    discount: '',
+    mrp: '',
+    amount: '',
+  }
+]

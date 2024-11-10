@@ -5,7 +5,7 @@ import Image from "next/image";
 const FeatureStrip = () => {
   return (
     <div className="w-full bg-[#84160A]">
-      <div className="max-w-7xl px-6 mx-auto lg:flex lg:flex-row grid sm:grid-cols-2 grid-cols-1 items-center justify-between lg:gap-x-16 gap-16 py-4">
+      <div className="max-w-7xl lg:px-6 lg:py-4 p-10 mx-auto lg:flex lg:flex-row grid grid-cols-2 items-center justify-between lg:gap-x-16 gap-16">
         {features.map((feature) => (
           <div
             key={feature.id}

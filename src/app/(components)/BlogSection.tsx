@@ -11,8 +11,8 @@ const BlogSection = () => {
         <h2 className="font-semibold text-black text-xl xl:text-4xl">Blog</h2>
 
         {/* Blog Section */}
-        <div className="flex flex-row gap-4">
-          <div className="flex w-2/3">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="flex lg:w-2/3">
             {firstBlog && (
               <div className="flex flex-col gap-3">
                 <Image
@@ -29,7 +29,7 @@ const BlogSection = () => {
               </div>
             )}
           </div>
-          <div className="flex flex-col justify-between gap-6 w-1/2">
+          <div className="flex flex-col justify-between gap-6 lg:w-1/2">
             {blogs.slice(1, 4).map((blog) => (
               <div key={blog.id} className="flex flex-row gap-3 items-start">
                 <Image

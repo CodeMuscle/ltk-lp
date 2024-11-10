@@ -4,11 +4,11 @@ import React from "react";
 const ExploreCategories = () => {
   return (
     <section className="w-full my-12 bg-[#D3B67C]">
-      <div className="lg:py-24 py-16 flex flex-col gap-3 items-center justify-center">
+      <div className="lg:py-24 max-w-[90%] mx-auto py-16 flex flex-col gap-3 items-center justify-center">
         <h2 className="font-semibold text-white text-lg lg:text-4xl">
           Explore Categories
         </h2>
-        <p className="text-white font-normal text-base lg:text-lg">
+        <p className="text-white font-normal text-base lg:text-lg text-center">
           Explore a variety of spices and food products to satisfy your palate.
         </p>
         <Link

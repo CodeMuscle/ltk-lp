@@ -9,7 +9,7 @@ const NewsletterSection = () => {
       </h2>
       <form className="flex flex-row gap-3">
         <input
-          className="focus:outline-none placeholder:text-gray-200 placeholder:text-base font-normal rounded-full min-w-[30rem] px-6"
+          className="focus:outline-none placeholder:text-gray-200 placeholder:text-base font-normal rounded-full min-w-[20rem] lg:min-w-[30rem] px-6"
           type="text"
           id="name"
           name="name"
