@@ -1,6 +1,5 @@
 import { CarouselSize } from "./Carousel";
 
-
 const ProductsSection = () => {
   return (
     <section className="xl:max-w-7xl max-w-[90%] my-16 mx-auto">
@@ -11,7 +10,6 @@ const ProductsSection = () => {
 
         {/* Carousel */}
         <CarouselSize />
-
       </div>
     </section>
   );

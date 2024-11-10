@@ -56,28 +56,60 @@ export const blogs = [
 export const qualities = [
   {
     id: 1,
-    icon: '/assets/preservatives.svg',
-    text: 'No Preservatives',
+    icon: "/assets/preservatives.svg",
+    text: "No Preservatives",
   },
   {
     id: 2,
-    icon: '/assets/additives.svg',
-    text: 'No Additives',
+    icon: "/assets/additives.svg",
+    text: "No Additives",
   },
   {
     id: 3,
-    icon: '/assets/chemicals.svg',
-    text: 'No Chemicals',
+    icon: "/assets/chemicals.svg",
+    text: "No Chemicals",
   },
 ];
 
 export const bestSellers = [
   {
     id: 1,
-    image: '',
-    name: '',
-    discount: '',
-    mrp: '',
-    amount: '',
-  }
-]
+    image: "/assets/asafoetida-powder.png",
+    name: "Asafoetida Powder",
+    discount: "Rs. 60.00",
+    mrp: "80.00",
+    quantity: "50g",
+  },
+  {
+    id: 2,
+    image: "/assets/millets-powder.png",
+    name: "Millet Instant Mix",
+    discount: "Rs. 90.00",
+    mrp: "100.00",
+    quantity: "75g",
+  },
+  {
+    id: 3,
+    image: "/assets/millets-powder.png",
+    name: "Millet Instant Mix",
+    discount: "Rs. 130.00",
+    mrp: "160.00",
+    quantity: "100g",
+  },
+  {
+    id: 4,
+    image: "/assets/asafoetida-powder.png",
+    name: "Asafoetida Powder",
+    discount: "Rs. 60.00",
+    mrp: "80.00",
+    quantity: "50g",
+  },
+  {
+    id: 5,
+    image: "/assets/millets-powder.png",
+    name: "Millet Instant Mix",
+    discount: "Rs. 130.00",
+    mrp: "160.00",
+    quantity: "100g",
+  },
+];
