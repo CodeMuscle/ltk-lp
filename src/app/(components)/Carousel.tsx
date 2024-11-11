@@ -42,7 +42,7 @@ export function CarouselSize() {
                       width={200}
                       height={200}
                     />
-                    <div className="flex flex-col items-start justify-start">
+                    <div className="flex flex-col gap-2 items-start justify-start">
                       <p className="text-lg font-normal">{item.name}</p>
                       <p className="text-yellow-400 text-lg">
                         {item.discount}{" "}
@@ -50,7 +50,7 @@ export function CarouselSize() {
                           {item.mrp}
                         </span>
                       </p>
-                      <p className="px-4 py-2 bg-black rounded-full text-base font-normal text-white">
+                      <p className="px-4 py-1 bg-black rounded-full text-base font-normal text-white">
                         {item.quantity}
                       </p>
                     </div>
@@ -60,7 +60,7 @@ export function CarouselSize() {
                       Buy Now
                     </button>
                     <button className="rounded-full w-full py-2 bg-white border border-[#000] text-black font-normal text-lg">
-                      Buy Now
+                      Add To Cart
                     </button>
                   </div>
                 </CardContent>
