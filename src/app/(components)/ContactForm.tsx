@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -24,7 +24,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     const formData = {
-      // @ts-ignore: Ignore TypeScript error on e.target access
+      // @ts-expect-error: Ignore TypeScript error on e.target access
       name: e.currentTarget.name.value,
       email: e.currentTarget.email.value,
       contact: e.currentTarget.contact.value,
