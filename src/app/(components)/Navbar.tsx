@@ -13,9 +13,9 @@ const Navbar = () => {
     <nav className="bg-white w-full py-8 flex flex-row lg:justify-end justify-center items-center">
       <div className="flex max-w-[90%] w-full lg:max-w-7xl gap-x-16 items-center justify-between">
         {/* Logo */}
-        <div className="logo hidden lg:block">
+        <Link href={`/`} className="logo hidden lg:block">
           <Image src={logo} alt="ltk-logo" width={100} height={100} />
-        </div>
+        </Link>
 
         {/* Navlinks */}
         <div className="hidden lg:flex flex-row items-center lg:justify-center justify-between lg:gap-x-16 gap-x-6 text-black">
@@ -31,17 +31,17 @@ const Navbar = () => {
         </div>
 
         {/* Mobile View */}
-        <div className="logo lg:hidden">
+        <Link href={`/`} className="logo lg:hidden">
           <Image src={logo} alt="ltk-logo" width={80} height={80} />
-        </div>
+        </Link>
 
         <div className="lg:pl-16 flex flex-row items-center justify-center gap-x-8 text-black lg:mr-12 xl:mr-28">
           <button className="font-normal lg:text-lg text-base">
             <Image src={searchIcon} alt={`Search`} height={25} width={25} />
           </button>
-          <button className="font-normal lg:text-lg text-base">
+          <Link href={`/login`} className="font-normal lg:text-lg text-base">
             <Image src={profileIcon} alt={`Profile`} height={20} width={20} />
-          </button>
+          </Link>
           <button className="font-normal lg:text-lg text-base px-3 py-2 bg-gray-200 rounded-full">
             <Link className="" href={`/cart`}>
               <Image src={cartIcon} alt={`Cart`} height={22} width={22} />

@@ -3,7 +3,7 @@ import React from "react";
 const NewsletterSection = () => {
   return (
     <section className="w-full lg:py-24 py-12 flex flex-col lg:gap-10 gap-6 items-center justify-center bg-[#D3B67C]">
-      <h2 className="text-white font-semibold text-xl lg:text-4xl text-center lg:max-w-[50%] max-w-[85%]">
+      <h2 className="text-white font-medium text-xl lg:text-4xl text-center lg:max-w-[50%] max-w-[85%]">
         Stay updated on the latest offers, and recipes by subscribing to our
         newsletter!
       </h2>
