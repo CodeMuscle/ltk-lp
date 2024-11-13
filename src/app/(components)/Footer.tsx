@@ -86,6 +86,12 @@ const Footer = () => {
           </p>
           <Image src={paymentIcon} alt="payment" width={300} height={50} />
         </div>
+        <div className="w-full h-1 bg-gray-500" />
+        <div className="flex items-start justify-start">
+          <p className="text-gray-600">
+            © {new Date().getFullYear()} Your Store. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
