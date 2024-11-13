@@ -11,13 +11,20 @@ type ProductCardProps = {
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="border rounded-lg p-4 shadow-md">
-      <Image
-        src={product.image_url}
-        alt={product.name}
-        width={200}
-        height={200}
-        className="object-cover mx-auto"
-      />
+      {product.image_url ? (
+        <Image
+          src={product.image_url}
+          alt={product.name}
+          width={200}
+          height={200}
+          className="object-cover mx-auto"
+        />
+      ) : (
+        <div className="w-200 h-200 bg-gray-200 flex items-center justify-center">
+          {/* Placeholder for the missing image */}
+          <span>No image available</span>
+        </div>
+      )}
       <h3 className="text-lg font-semibold mt-4">{product.name}</h3>
       <div className="text-gray-500 text-sm">Quantity: {product.quantity}</div>
       <div className="text-gray-600 mt-2">Weight: {product.weight}g</div>

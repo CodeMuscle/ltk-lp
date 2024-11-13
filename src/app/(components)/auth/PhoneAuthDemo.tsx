@@ -13,7 +13,7 @@ export const PhoneAuth = () => {
   const handleSendOTP = async () => {
     try {
       const formattedPhone = `+91${phone}`; // Format for Indian numbers
-      const { data, error } = await supabase.auth.signInWithOtp({
+      const { error } = await supabase.auth.signInWithOtp({
         phone: formattedPhone,
       });
 
@@ -28,7 +28,7 @@ export const PhoneAuth = () => {
   const handleVerifyOTP = async () => {
     try {
       const formattedPhone = `+91${phone}`;
-      const { data, error } = await supabase.auth.verifyOtp({
+      const { error } = await supabase.auth.verifyOtp({
         phone: formattedPhone,
         token: otp,
         type: "sms",

@@ -1,10 +1,11 @@
 export type Product = {
-  id: string;
+  id: number;
   name: string;
-  image_url: string;
-  quantity: number;
-  weight: number;
-  mrp: number;
+  image_url: string | null;
   discount_price: number;
+  mrp: number;
+  quantity: string;
+  weight: number;
   available: boolean;
+  created_at: string;
 };

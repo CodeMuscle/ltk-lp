@@ -4,6 +4,7 @@
 import { products } from "@/app/(data)/products"; // Import the data
 import { ProductCard } from "./ProductCard";
 
+
 export function ProductsList() {
   // No need to use hooks for fetching, directly use the products data
   if (!products.length) {
