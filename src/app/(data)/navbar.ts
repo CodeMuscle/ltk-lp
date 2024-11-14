@@ -7,43 +7,42 @@ export const navLinks = [
   {
     id: 2,
     name: "Dosa Mix",
-    url: "/dosa-mix",
+    url: "/products",
   },
   {
     id: 3,
     name: "Asafoetida",
-    url: "/asafoetida",
+    url: "/products",
   },
   {
     id: 4,
     name: "Combo Pack",
-    url: "/combos",
+    url: "/products",
   },
   {
     id: 5,
     name: "New Arrival",
-    url: "/new-arrival",
+    url: "/products",
   },
 ];
-
 
 export const navIcons = [
   {
     id: 1,
-    name: 'Search',
-    icon: '/assets/search.svg',
+    name: "Search",
+    icon: "/assets/search.svg",
     // href: "",
   },
   {
     id: 2,
-    name: 'Profile',
-    icon: '/assets/profile.svg',
+    name: "Profile",
+    icon: "/assets/profile.svg",
     // href: "",
   },
   {
     id: 3,
-    name: 'Cart',
-    icon: '/assets/cart.svg',
+    name: "Cart",
+    icon: "/assets/cart.svg",
     href: "/cart",
   },
-]
+];
