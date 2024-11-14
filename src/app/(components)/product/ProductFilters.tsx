@@ -46,20 +46,20 @@ export function ProductFilters({
   };
 
   // Clear filter for weight
-  const clearWeightFilter = () => {
-    setFilters({
-      ...filters,
-      weight: [0, 1000], // Reset weight filter to default
-    });
-  };
+  // const clearWeightFilter = () => {
+  //   setFilters({
+  //     ...filters,
+  //     weight: [0, 1000], // Reset weight filter to default
+  //   });
+  // };
 
-  // Clear filter for price
-  const clearPriceFilter = () => {
-    setFilters({
-      ...filters,
-      price: [0, 1000], // Reset price filter to default
-    });
-  };
+  // // Clear filter for price
+  // const clearPriceFilter = () => {
+  //   setFilters({
+  //     ...filters,
+  //     price: [0, 1000], // Reset price filter to default
+  //   });
+  // };
 
   return (
     <div className="sticky top-12 space-y-6 pb-6">
