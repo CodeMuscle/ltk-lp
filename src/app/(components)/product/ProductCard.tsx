@@ -10,7 +10,7 @@ type ProductCardProps = {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="border rounded-lg p-4 shadow-md">
+    <div className="border rounded-lg p-4 shadow-md h-full">
       <div className="flex flex-col items-start justify-between h-full">
         <div className="w-full">
           {product.image_url ? (
