@@ -24,7 +24,7 @@ export const products = [
   {
     id: 3,
     name: "Turmeric Powder",
-    image_url: "/assets/turmeric-powder.png",
+    image_url: "/assets/turmericPowder.jpg",
     discount_price: 40.0,
     mrp: 50.0,
     quantity: "100g",
@@ -35,7 +35,7 @@ export const products = [
   {
     id: 4,
     name: "Ginger Powder",
-    image_url: "/assets/ginger-powder.png",
+    image_url: "/assets/gingerPowder.webp",
     discount_price: 55.0,
     mrp: 70.0,
     quantity: "75g",
@@ -45,8 +45,8 @@ export const products = [
   },
   {
     id: 5,
-    name: "Chili Powder",
-    image_url: "/assets/chili-powder.png",
+    name: "Chilli Powder",
+    image_url: "/assets/chilliPowder.webp",
     discount_price: 45.0,
     mrp: 55.0,
     quantity: "50g",
@@ -56,8 +56,8 @@ export const products = [
   },
   {
     id: 6,
-    name: "Cumin Seeds",
-    image_url: "/assets/cumin-seeds.png",
+    name: "Cumin Powder",
+    image_url: "/assets/cuminPowder.jpg",
     discount_price: 80.0,
     mrp: 100.0,
     quantity: "100g",

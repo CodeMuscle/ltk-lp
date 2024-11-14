@@ -12,7 +12,7 @@ const ExploreCategories = () => {
           Explore a variety of spices and food products to satisfy your palate.
         </p>
         <Link
-          href="/explore"
+          href="/products"
           className="text-white rounded-full px-12 py-1 bg-[#84160A] font-normal uppercase text-base lg:text-lg mt-3"
         >
           Explore Now

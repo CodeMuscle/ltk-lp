@@ -13,7 +13,9 @@ export default function Home() {
     <section className="w-full mx-auto">
       <HeroSection />
       <FeatureStrip />
-      <ProductsSection />
+      <ProductsSection title={"Best Sellers"} />
+      <ProductsSection title={"Asafoetida"} />
+      <ProductsSection title={"Ready Mix Powder"} />
       <ExploreCategories />
       <OurStory />
       <TestimonialSection />
