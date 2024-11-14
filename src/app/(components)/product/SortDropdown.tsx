@@ -1,8 +1,14 @@
 "use client";
 
-import { useState } from "react";
-
-export function SortDropdown({ sortOrder, setSortOrder }: { sortOrder: string; setSortOrder: (order: string) => void }) {
+export function SortDropdown({
+  productCount,
+  sortOrder,
+  setSortOrder,
+}: {
+  productCount: number;
+  sortOrder: string;
+  setSortOrder: (order: string) => void;
+}) {
   return (
     <div className="w-full border border-gray-200 px-4 py-8 flex flex-row gap-3 items-center justify-end">
       <div className="flex flex-row gap-2 items-center justify-center">
@@ -18,6 +24,9 @@ export function SortDropdown({ sortOrder, setSortOrder }: { sortOrder: string; s
           </select>
         </div>
       </div>
+      <p className="font-normal text-base text-gray-500">
+        {`${productCount} ${productCount === 1 ? "Product" : "Products"}`}
+      </p>
     </div>
   );
 }

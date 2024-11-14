@@ -1,6 +1,6 @@
 import { CarouselSize } from "./Carousel";
 
-const ProductsSection = ({ title }: { title: String }) => {
+const ProductsSection = ({ title }: { title: string }) => {
   return (
     <section className="xl:max-w-7xl max-w-[90%] my-16 mx-auto">
       <div className="flex flex-col gap-8 items-center">

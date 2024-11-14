@@ -42,7 +42,7 @@ export function ProductsList() {
         <ProductFilters filters={filters} setFilters={setFilters} />
       </div>
       <div className="flex flex-col gap-4 items-center justify-end w-full">
-        <SortDropdown sortOrder={sortOrder} setSortOrder={setSortOrder} />
+        <SortDropdown sortOrder={sortOrder} setSortOrder={setSortOrder} productCount={filteredProducts.length} />
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />

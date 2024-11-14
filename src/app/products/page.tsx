@@ -1,6 +1,5 @@
 // src/app/products.tsx
 import { ProductsList } from "@/app/(components)/product/ProductsList";
-import { ProductFilters } from "@/app/(components)/product/ProductFilters";
 
 export default function ProductsPage() {
   return (
