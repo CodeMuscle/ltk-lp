@@ -14,7 +14,7 @@ export function ProductFilters({
   setFilters: (filters: Filters) => void;
 }) {
   return (
-    <div className="sticky top-12 space-y-6">
+    <div className="sticky top-12 space-y-6 pb-6 border-b border-gray-200">
       <h3 className="font-semibold text-lg lg:text-2xl">Filters</h3>
       {/* Weight Range Dropdown */}
       <div>
