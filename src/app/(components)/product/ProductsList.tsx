@@ -1,21 +1,32 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { products } from "@/app/(data)/products";
 import { ProductCard } from "./ProductCard";
 import { ProductFilters } from "./ProductFilters";
-import { useState, useEffect } from "react";
 import { SortDropdown } from "./SortDropdown";
+import { motion, AnimatePresence } from "framer-motion";
+
+interface Filters {
+  weight: [number, number];
+  price: [number, number];
+  available: boolean;
+}
 
 export function ProductsList() {
-  const [filters, setFilters] = useState({
-    weight: [0, 1000] as [number, number], // specify as tuple
-    price: [0, 1000] as [number, number], // specify as tuple
+  const [filters, setFilters] = useState<Filters>({
+    weight: [0, 1000],
+    price: [0, 1000],
     available: true,
   });
+
   const [sortOrder, setSortOrder] = useState("price");
   const [filteredProducts, setFilteredProducts] = useState(products);
+  const [isFiltering, setIsFiltering] = useState(false); // New state to manage filtering process
 
   useEffect(() => {
+    setIsFiltering(true); // Set filtering state to true when filters are applied
+
     const newFilteredProducts = products
       .filter((product) => {
         const isWithinWeightRange =
@@ -51,29 +62,54 @@ export function ProductsList() {
         }
       });
 
-    setFilteredProducts(newFilteredProducts);
-  }, [products, filters, sortOrder]);
+    // Simulate a small delay before showing the products list
+    setTimeout(() => {
+      setFilteredProducts(newFilteredProducts);
+      setIsFiltering(false); // Set filtering to false once filtering is done
+    }, 300); // Adjust the delay as needed for smooth transition
+  }, [filters, sortOrder]);
 
-  if (!filteredProducts.length) {
-    return <div>No products available</div>;
-  }
 
   return (
-    <div className="flex gap-8">
-      <div className="w-64 shrink-0">
+    <div className="flex flex-col md:flex-row gap-8">
+      <div className="w-full md:w-64 shrink-0">
         <ProductFilters filters={filters} setFilters={setFilters} />
       </div>
-      <div className="flex flex-col gap-4 items-center justify-end w-full">
+      <div className="flex flex-col gap-4 items-center justify-start w-full">
         <SortDropdown
           sortOrder={sortOrder}
           setSortOrder={setSortOrder}
           productCount={filteredProducts.length}
         />
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {filteredProducts.length > 1 ? (
+          <motion.div
+            className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isFiltering ? 0 : 1 }} // Animate opacity based on filtering state
+            transition={{ duration: 0.5 }}
+          >
+            <AnimatePresence>
+              {!isFiltering &&
+                filteredProducts.map((product) => (
+                  <motion.div
+                    key={product.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  >
+                    <ProductCard product={product} />
+                  </motion.div>
+                ))}
+            </AnimatePresence>
+          </motion.div>
+        ) : (
+          <div className="flex flex-col items-center justify-center h-full">
+            <p className="text-xl font-medium text-gray-500">
+              No products available
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
