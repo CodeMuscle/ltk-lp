@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react";
+import BulkOrderForm from "../(components)/BulkOrdersForm";
+import NewsletterSection from "../(components)/NewsletterSection";
 
 const BulkOrder = () => {
   return (
@@ -10,10 +12,15 @@ const BulkOrder = () => {
       {/* Form */}
       <div className="form-section w-full">
         {/* <BulkOrderForm /> */}
+        <BulkOrderForm />
       </div>
 
+      {/* Newsletter Section */}
+      <div className="w-full">
+        <NewsletterSection />
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default BulkOrder
+export default BulkOrder;
