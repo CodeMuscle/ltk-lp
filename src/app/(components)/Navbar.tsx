@@ -10,7 +10,7 @@ import logo from "../../../public/assets/logo.svg";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white w-full py-8 flex flex-row lg:justify-end justify-center items-center">
+    <nav className="bg-white w-full py-8 flex flex-row justify-center items-center">
       <div className="flex max-w-[90%] w-full lg:max-w-7xl gap-x-16 items-center justify-between">
         {/* Logo */}
         <Link href={`/`} className="logo hidden lg:block">
@@ -35,7 +35,7 @@ const Navbar = () => {
           <Image src={logo} alt="ltk-logo" width={80} height={80} />
         </Link>
 
-        <div className="lg:pl-16 flex flex-row items-center justify-center gap-x-8 text-black lg:mr-12 xl:mr-28">
+        <div className="lg:pl-16 flex flex-row items-center justify-center gap-x-8 text-black">
           <button className="font-normal lg:text-lg text-base">
             <Image src={searchIcon} alt={`Search`} height={25} width={25} />
           </button>
