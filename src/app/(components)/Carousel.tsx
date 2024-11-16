@@ -70,8 +70,10 @@ export function CarouselSize() {
         ))}
       </CarouselContent>
       {/* Carousel navigation buttons */}
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className="hidden md:block">
+        <CarouselPrevious />
+        <CarouselNext />
+      </div>
     </Carousel>
   );
 }
