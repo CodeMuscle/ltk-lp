@@ -27,11 +27,11 @@ export const footerLinks = {
     },
   ],
   company: [
-    {
-      id: 1,
-      name: "About Us",
-      url: "/about-us",
-    },
+    // {
+    //   id: 1,
+    //   name: "About Us",
+    //   url: "/about-us",
+    // },
     {
       id: 2,
       name: "Contact Us",
@@ -59,16 +59,16 @@ export const footerLinks = {
       name: "My Account",
       url: "/account",
     },
-    {
-      id: 2,
-      name: "Wishlist",
-      url: "/wishlist",
-    },
-    {
-      id: 3,
-      name: "Blogs",
-      url: "/blogs",
-    },
+    // {
+    //   id: 2,
+    //   name: "Wishlist",
+    //   url: "/wishlist",
+    // },
+    // {
+    //   id: 3,
+    //   name: "Blogs",
+    //   url: "/blogs",
+    // },
   ],
 };
 

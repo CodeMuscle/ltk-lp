@@ -44,9 +44,9 @@ const OurStory = () => {
                 </div>
               ))}
             </div>
-            <button className="rounded-full bg-[#84160A] px-12 py-2 font-normal uppercase text-base text-white">
+            {/* <button className="rounded-full bg-[#84160A] px-12 py-2 font-normal uppercase text-base text-white">
               About Us
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
