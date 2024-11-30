@@ -12,26 +12,26 @@ import plusIcon from "../../../../public/assets/plus.svg";
 import { products } from "../../(data)/products";
 import ProductsSection from "@/app/(components)/ProductsSection";
 
-interface IProductProps {
-  id: number;
-  name: string;
-  slug: string;
-  frontImg: string;
-  backImage: string;
-  discount_price: string;
-  mrp: number;
-  quantity: string;
-  weight: number;
-  available: boolean;
-}
+// interface IProductProps {
+//   id: number;
+//   name: string;
+//   slug: string;
+//   frontImg: string;
+//   backImage: string;
+//   discount_price: string;
+//   mrp: number;
+//   quantity: string;
+//   weight: number;
+//   available: boolean;
+// }
 
 interface IProductPageProps {
-  params: Promise<{ slug: string }>; // Update to indicate params is a Promise
+  params: { slug: string }; // Update to indicate params is a Promise
 }
 
 const ProductPage = ({ params }: IProductPageProps) => {
   // Use React.use() to unwrap the params
-  const { slug } = React.use(params); // Unwrap params
+  const { slug } = (params); // Unwrap params
 
   // Fetch the product data based on the slug
   const product = products.find((prod) => prod.slug === slug);
