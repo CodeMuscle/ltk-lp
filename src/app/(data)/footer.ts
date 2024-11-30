@@ -78,20 +78,20 @@ export const socialIcons = [
     id: 1,
     name: 'Instagram',
     icon: '/assets/instagram.svg',
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/ltk.foods?igsh=bDJjMmdzcnZwN3J2",
   },
-  {
-    id: 2,
-    name: 'Facebook',
-    icon: '/assets/fb.svg',
-    href: "https://www.facebook.com/",
-  },
-  {
-    id: 3,
-    name: 'Twitter',
-    icon: '/assets/x.svg',
-    href: "https://www.x.com/",
-  },
+  // {
+  //   id: 2,
+  //   name: 'Facebook',
+  //   icon: '/assets/fb.svg',
+  //   href: "https://www.facebook.com/",
+  // },
+  // {
+  //   id: 3,
+  //   name: 'Twitter',
+  //   icon: '/assets/x.svg',
+  //   href: "https://www.x.com/",
+  // },
 ];
 
 export const paymentIcons = [

@@ -57,18 +57,12 @@ export function CarouselSize() {
                     </div>
                   </div>
                   <div className="flex flex-col gap-2 items-center justify-center w-full">
-                    <Link
-                      href={`/bulk-orders`}
-                      className="rounded-full w-full py-2 bg-[#84160A] border border-[#84160A] text-white font-normal text-lg text-center"
-                    >
+                    <button className="rounded-full w-full py-2 bg-[#84160A] border border-[#84160A] text-white font-normal text-lg text-center">
                       Bulk Order
-                    </Link>
-                    <Link
-                      href={`/bulk-orders`}
-                      className="rounded-full w-full py-2 bg-white border border-[#000] text-black font-normal text-lg text-center"
-                    >
+                    </button>
+                    <button className="rounded-full w-full py-2 bg-white border border-[#000] text-black font-normal text-lg text-center">
                       Add To Cart
-                    </Link>
+                    </button>
                   </div>
                 </CardContent>
               </Card>

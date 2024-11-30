@@ -27,6 +27,8 @@ const ProductPage = ({ params }: IProductPageProps) => {
 
   const product = products.find((prod) => prod.slug === slug);
 
+  const [mainImage, setMainImage] = useState(product?.image_url || "");
+
   if (!product) {
     return (
       <div className="flex flex-col gap-8 lg:max-w-7xl max-w-[90%] items-center justify-center py-12">
@@ -62,7 +64,10 @@ const ProductPage = ({ params }: IProductPageProps) => {
           Home
         </Link>
         <Image src={nextIcon} alt="icon" width={8} height={8} />
-        <Link href="/" className="font-normal text-base hover:underline">
+        <Link
+          href="/products"
+          className="font-normal text-base hover:underline"
+        >
           Products
         </Link>
         <Image src={nextIcon} alt="icon" width={8} height={8} />
@@ -74,15 +79,60 @@ const ProductPage = ({ params }: IProductPageProps) => {
         <div className="product-section w-full">
           <div className="flex lg:flex-row flex-col gap-12 items-start justify-between">
             {/* Image Section */}
-            <div className="image-section md:w-1/2 flex items-center justify-center">
-              <div className="min-h-[15rem]">
-                <Image
-                  src={product.image_url}
-                  alt={product.name}
-                  height={500}
-                  width={350}
-                  style={{ width: "100%", maxWidth: "350px" }}
-                />
+            <div className="flex flex-col gap-1 items-center justify-center">
+              <div className="image-section md:w-1/2 flex items-center justify-center">
+                {/* Main Image */}
+                <div className="fade-in min-h-[15rem] transition-all duration-500 ease-in-out">
+                  {mainImage && (
+                    <Image
+                      src={mainImage}
+                      alt={product.name}
+                      height={1000}
+                      width={1000}
+                      style={{
+                        width: "100%",
+                        maxWidth: "1000px",
+                        minWidth: "600px",
+                        minHeight: "300px",
+                      }}
+                    />
+                  )}
+                </div>
+              </div>
+
+              <div className="flex flex-row gap-2">
+                <button
+                  className={`border shadow-md rounded-xl hover:border-gray-600 py-2 ${
+                    mainImage === product.image_front
+                      ? "border-[#84160A]"
+                      : "border-gray-200"
+                  }`}
+                  onClick={() => setMainImage(product.image_front)}
+                >
+                  <Image
+                    src={product.image_front}
+                    alt={product.name}
+                    height={200}
+                    width={200}
+                    style={{ width: "100%", maxWidth: "200px" }}
+                  />
+                </button>
+                <button
+                  className={`border shadow-md rounded-xl hover:border-gray-600 py-2 ${
+                    mainImage === product.image_back
+                      ? "border-[#84160A]"
+                      : "border-gray-200"
+                  }`}
+                  onClick={() => setMainImage(product.image_back)}
+                >
+                  <Image
+                    src={product.image_back}
+                    alt={product.name}
+                    height={200}
+                    width={200}
+                    style={{ width: "100%", maxWidth: "200px" }}
+                  />
+                </button>
               </div>
             </div>
 
