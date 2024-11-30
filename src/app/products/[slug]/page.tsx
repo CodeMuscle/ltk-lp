@@ -31,10 +31,10 @@ interface IProductPageProps {
 
 const ProductPage = ({ params }: IProductPageProps) => {
   // Use React.use() to unwrap the params
-  const { slug } = (params); // Unwrap params
+  const { slug } = params; // Unwrap params
 
   // Fetch the product data based on the slug
-  const product = products.find((prod) => prod.slug === slug);
+  const product = products.find((prod) => prod.slug === slug)!;
 
   // State for quantity and selected size
   const [quantity, setQuantity] = useState(1); // Default quantity
