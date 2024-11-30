@@ -13,6 +13,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { bestSellers } from "../(data)/homepage";
 import Image from "next/image";
+import Link from "next/link";
 
 export function CarouselSize() {
   return (
@@ -31,7 +32,7 @@ export function CarouselSize() {
         {/* Mapping over the bestSellers array to create a carousel item for each product */}
         {bestSellers.map((item) => (
           <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
+            <Link href={item.slug} className="p-1">
               <Card key={item.id}>
                 <CardContent className="flex flex-col gap-2 aspect-square items-center justify-center p-4 w-full">
                   <div className="flex flex-col gap-3 items-start justify-start w-full">
@@ -44,9 +45,9 @@ export function CarouselSize() {
                     />
                     <div className="flex flex-col gap-2 items-start justify-start">
                       <p className="text-lg font-normal">{item.name}</p>
-                      <p className="text-yellow-400 text-lg">
+                      <p className="text-black text-lg">
                         {item.discount}{" "}
-                        <span className="text-gray-500 line-through">
+                        <span className="text-gray-400 line-through">
                           {item.mrp}
                         </span>
                       </p>
@@ -65,7 +66,7 @@ export function CarouselSize() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </Link>
           </CarouselItem>
         ))}
       </CarouselContent>

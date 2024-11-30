@@ -13,9 +13,9 @@ const OurStory = () => {
         </h2>
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           <div className="image-section lg:w-1/2">
-            <Image src={storyImage} alt="our-story" style={{ width: "100%" }} />
+            <Image src={storyImage} alt="our-story" style={{ width: "100%", maxHeight: '22rem' }} />
           </div>
-          <div className="flex flex-col gap-6 lg:items-start items-center lg:w-1/2">
+          <div className="flex flex-col gap-12 lg:items-start items-center lg:w-1/2">
             <p className="font-normal text-base lg:text-lg">
               Launched in the year 2004, with 10 years experience in business
               and marketing, more specifically in spices, grains, millets etc.
@@ -25,7 +25,7 @@ const OurStory = () => {
               products with no added chemicals, preservatives, additives. All
               the products are approved by laboratories.
             </p>
-            <div className="flex flex-row gap-8 items-center justify-between">
+            <div className="flex flex-row gap-24 items-center justify-between">
               {qualities.map((quality) => (
                 <div
                   key={quality.id}

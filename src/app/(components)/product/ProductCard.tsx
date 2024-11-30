@@ -3,6 +3,7 @@
 
 import { Product } from "@/types/types";
 import Image from "next/image";
+import Link from "next/link";
 
 type ProductCardProps = {
   product: Product;
@@ -10,8 +11,8 @@ type ProductCardProps = {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="border rounded-lg p-4 shadow-md h-full">
-      <div className="flex flex-col items-start justify-between h-full">
+    <Link href={`/products/${product.slug}`} className="">
+      <div className="border rounded-lg p-4 shadow-md flex flex-col items-start justify-between h-full">
         <div className="w-full">
           {product.image_url ? (
             <Image
@@ -33,18 +34,18 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
           <div className="text-gray-600 mt-2">Weight: {product.weight}g</div> */}
           <div className="flex flex-row gap-2 items-center justify-start">
-            <p className="text-[#F1A00B] font-semibold text-lg">
+            <p className="text-black font-normal text-lg">
               ₹{product.discount_price}
             </p>
             {product.discount_price < product.mrp && (
-              <p className="text-gray-500 line-through text-lg">
+              <p className="text-gray-400 line-through text-lg">
                 ₹{product.mrp}
               </p>
             )}
           </div>
-            <div className="rounded-full px-4 py-1 bg-black text-white w-fit my-2">
-              <p className="text-base font-medium">{product.weight}g</p>
-            </div>
+          <div className="rounded-full px-4 py-1 bg-black text-white w-fit my-2">
+            <p className="text-base font-medium">{product.weight}g</p>
+          </div>
         </div>
         {product.available ? (
           <div className="flex flex-col gap-3 items-center justify-center w-full">
@@ -80,6 +81,6 @@ export function ProductCard({ product }: ProductCardProps) {
           </button>
         )}
       </div>
-    </div>
+    </Link>
   );
 }

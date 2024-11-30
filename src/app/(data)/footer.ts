@@ -8,22 +8,22 @@ export const footerLinks = {
     {
       id: 2,
       name: "Maavu",
-      url: "/maavu",
+      url: "/products",
     },
     {
       id: 3,
       name: "Perungayam",
-      url: "/perungayam",
+      url: "/products",
     },
     {
       id: 4,
       name: "Combo Pack",
-      url: "/combos",
+      url: "/products",
     },
     {
       id: 5,
       name: "New Arrival",
-      url: "/new-arrival",
+      url: "/products",
     },
   ],
   company: [
@@ -45,19 +45,19 @@ export const footerLinks = {
     {
       id: 4,
       name: "Return & Refund",
-      url: "/returns",
+      url: "/return-&-refund-policy",
     },
     {
       id: 5,
       name: "Shipping Policy",
-      url: "/shopping-policy",
+      url: "/shipping-policy",
     },
   ],
   account: [
     {
       id: 1,
       name: "My Account",
-      url: "/account",
+      url: "/login",
     },
     // {
     //   id: 2,
