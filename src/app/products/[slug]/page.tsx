@@ -80,7 +80,7 @@ const ProductPage = ({ params }: IProductPageProps) => {
           <div className="flex lg:flex-row flex-col gap-12 items-start justify-between">
             {/* Image Section */}
             <div className="flex flex-col gap-1 items-center justify-center">
-              <div className="image-section md:w-1/2 flex items-center justify-center">
+              <div className="image-section md:w-1/2 md:min-w-[500px] flex items-center justify-center">
                 {/* Main Image */}
                 <div className="fade-in min-h-[15rem] transition-all duration-500 ease-in-out">
                   {mainImage && (
@@ -91,9 +91,8 @@ const ProductPage = ({ params }: IProductPageProps) => {
                       width={1000}
                       style={{
                         width: "100%",
-                        maxWidth: "1000px",
-                        minWidth: "600px",
-                        minHeight: "300px",
+                        minWidth: "300px",
+                        maxHeight: '400px',
                       }}
                     />
                   )}
@@ -102,7 +101,7 @@ const ProductPage = ({ params }: IProductPageProps) => {
 
               <div className="flex flex-row gap-2">
                 <button
-                  className={`border shadow-md rounded-xl hover:border-gray-600 py-2 ${
+                  className={`border shadow-md rounded-xl hover:border-gray-600 py-2 w-1/2 ${
                     mainImage === product.image_front
                       ? "border-[#84160A]"
                       : "border-gray-200"
@@ -118,7 +117,7 @@ const ProductPage = ({ params }: IProductPageProps) => {
                   />
                 </button>
                 <button
-                  className={`border shadow-md rounded-xl hover:border-gray-600 py-2 ${
+                  className={`border shadow-md rounded-xl hover:border-gray-600 py-2 w-1/2 ${
                     mainImage === product.image_back
                       ? "border-[#84160A]"
                       : "border-gray-200"
