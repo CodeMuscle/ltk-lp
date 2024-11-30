@@ -12,67 +12,38 @@ import plusIcon from "../../../../public/assets/plus.svg";
 import { products } from "../../(data)/products";
 import ProductsSection from "@/app/(components)/ProductsSection";
 
-// interface IProductProps {
-//   id: number;
-//   name: string;
-//   slug: string;
-//   frontImg: string;
-//   backImage: string;
-//   discount_price: string;
-//   mrp: number;
-//   quantity: string;
-//   weight: number;
-//   available: boolean;
-// }
-
 interface IProductPageProps {
-  params: { slug: string }; // Update to indicate params is a Promise
+  params: Promise<{ slug: string }>;
 }
 
 const ProductPage = ({ params }: IProductPageProps) => {
-  // Use React.use() to unwrap the params
-  const { slug } = params; // Unwrap params
+  const [quantity, setQuantity] = useState(1);
+  const [selectedSizeIndex, setSelectedSizeIndex] = useState(0);
 
-  // Fetch the product data based on the slug
-  const product = products.find((prod) => prod.slug === slug)!;
+  const [expandDescription, setExpandDescription] = useState(true);
+  const [expandReview, setExpandReview] = useState(false);
 
-  // State for quantity and selected size
-  const [quantity, setQuantity] = useState(1); // Default quantity
-  const [selectedSizeIndex, setSelectedSizeIndex] = useState(0); // Default size
+  const { slug } = React.use(params);
 
-  // Function to handle quantity increase
-  const increaseQuantity = () => {
-    setQuantity((prev) => prev + 1);
-  };
+  const product = products.find((prod) => prod.slug === slug);
 
-  // Function to handle quantity decrease
-  const decreaseQuantity = () => {
-    setQuantity((prev) => (prev > 1 ? prev - 1 : prev)); // Prevent going below 1
-  };
-
-  // Function to handle size selection
-  const handleSizeChange = (index: number) => {
-    setSelectedSizeIndex(index);
-  };
-
-  // Calculate total price based on selected size and quantity
-  const priceMultiplier =
-    selectedSizeIndex > 0 ? 1 + selectedSizeIndex * 0.25 : 1; // Multiplier logic
-  const totalPrice = product.discount_price * priceMultiplier * quantity;
-
-  // If no product is found, return a fallback UI
   if (!product) {
     return (
       <div className="flex flex-col gap-8 lg:max-w-7xl max-w-[90%] items-center justify-center py-12">
         <p className="text-black font-2xl text-center">{`Product not found :(`}</p>
-        ;
       </div>
     );
   }
 
-  // State Management for Description
-  const [expandDescription, setExpandDescription] = useState<boolean>(true);
-  const [expandReview, setExpandReview] = useState<boolean>(false);
+  const increaseQuantity = () => setQuantity((prev) => prev + 1);
+  const decreaseQuantity = () =>
+    setQuantity((prev) => (prev > 1 ? prev - 1 : prev));
+
+  const handleSizeChange = (index: number) => setSelectedSizeIndex(index);
+
+  const priceMultiplier =
+    selectedSizeIndex > 0 ? 1 + selectedSizeIndex * 0.25 : 1;
+  const totalPrice = product.discount_price * priceMultiplier * quantity;
 
   const expandTab1 = () => {
     setExpandDescription(true);

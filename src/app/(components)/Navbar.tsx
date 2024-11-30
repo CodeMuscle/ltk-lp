@@ -15,14 +15,21 @@ import logo from "../../../public/assets/logo.svg";
 type Product = {
   id: number;
   name: string;
+  slug: string;
+  description: string;
+  reviews: {
+    id: string;
+    name: string;
+    description: string;
+  }[];
   image_url: string;
   discount_price: number;
   mrp: number;
-  quantity: string;
+  quantity: string[]; // Change this to match your products array
   weight: number;
   available: boolean;
   created_at: string;
-};
+}
 
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
