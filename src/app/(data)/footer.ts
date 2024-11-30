@@ -8,12 +8,12 @@ export const footerLinks = {
     {
       id: 2,
       name: "Maavu",
-      url: "/products",
+      url: "/products/millet-instant-mix",
     },
     {
       id: 3,
       name: "Perungayam",
-      url: "/products",
+      url: "/products/asafoetida-powder",
     },
     {
       id: 4,

@@ -58,7 +58,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 }`}
                 disabled={!product.available}
               >
-                {product.available ? "Buy Now" : "Out of Stock"}
+                {product.available ? "Bulk Order" : "Out of Stock"}
               </button>
             )}
             <button

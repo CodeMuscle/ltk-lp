@@ -5,7 +5,7 @@ import heroBanner from "../../../public/assets/heroBanner.png";
 
 const HeroSection = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto">
+    <section className="w-full max-w-[1440px] mx-auto">
       <Image src={heroBanner} alt="heroBanner" style={{ width: "100%" }} />
     </section>
   );

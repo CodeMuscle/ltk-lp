@@ -62,7 +62,11 @@ const ProductPage = ({ params }: IProductPageProps) => {
           Home
         </Link>
         <Image src={nextIcon} alt="icon" width={8} height={8} />
-        <p className="font-normal text-base">Product Page</p>
+        <Link href="/" className="font-normal text-base hover:underline">
+          Products
+        </Link>
+        <Image src={nextIcon} alt="icon" width={8} height={8} />
+        <p className="font-normal text-base">{product.name}</p>
       </div>
 
       <div className="w-full flex flex-col gap-12 justify-center items-center">
@@ -156,12 +160,18 @@ const ProductPage = ({ params }: IProductPageProps) => {
 
               {/* Buy Now Button */}
               <div className="flex flex-col gap-2 items-center justify-center w-full mt-5">
-                <button className="rounded-full w-full py-2 bg-[#84160A] border border-[#84160A] text-white font-normal text-lg">
-                  Buy Now
-                </button>
-                <button className="rounded-full w-full py-2 bg-white border border-[#000] text-black font-normal text-lg">
+                <Link
+                  href={`/bulk-orders`}
+                  className="rounded-full w-full py-2 bg-[#84160A] border border-[#84160A] text-white font-normal text-lg text-center"
+                >
+                  Bulk Order
+                </Link>
+                <Link
+                  href={`/bulk-orders`}
+                  className="rounded-full w-full py-2 bg-white border border-[#000] text-black font-normal text-lg text-center"
+                >
                   Add To Cart
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -195,7 +205,7 @@ const ProductPage = ({ params }: IProductPageProps) => {
                   expandReview ? "text-black" : "text-gray-500"
                 }`}
               >
-                Review
+                Reviews
               </p>
             </button>
           </div>
