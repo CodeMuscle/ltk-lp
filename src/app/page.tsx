@@ -10,7 +10,7 @@ import ProductsSection from "./(components)/ProductsSection";
 
 export default function Home() {
   return (
-    <section className="w-full mx-auto">
+    <section className="w-full mx-auto overflow-hidden">
       <HeroSection />
       <FeatureStrip />
       <ProductsSection title={"Best Sellers"} />
