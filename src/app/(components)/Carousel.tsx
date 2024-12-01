@@ -11,7 +11,7 @@ import {
   // CarouselPrevious,
 } from "@/components/ui/carousel";
 // import Autoplay from "embla-carousel-autoplay";
-import { bestSellers } from "../(data)/homepage";
+// import { bestSellers } from "../(data)/homepage";
 import Image from "next/image";
 import Link from "next/link";
 import { Data } from "@/types/types";
