@@ -14,8 +14,13 @@ import {
 import { bestSellers } from "../(data)/homepage";
 import Image from "next/image";
 import Link from "next/link";
+import { Data } from "@/types/types";
 
-export function CarouselSize() {
+interface IDataProps {
+  data: Data[];
+}
+
+export function CarouselSize({ data }: IDataProps) {
   return (
     <Carousel
       opts={{
@@ -30,7 +35,7 @@ export function CarouselSize() {
     >
       <CarouselContent>
         {/* Mapping over the bestSellers array to create a carousel item for each product */}
-        {bestSellers.map((item) => (
+        {data.map((item) => (
           <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
             <Link href={item.slug} className="p-1">
               <Card key={item.id}>
@@ -38,7 +43,7 @@ export function CarouselSize() {
                   <div className="flex flex-col gap-3 items-start justify-start w-full">
                     <Image
                       className="self-center min-h-[20rem]"
-                      src={item.image}
+                      src={item.image || ""}
                       alt={item.name}
                       width={200}
                       height={200}

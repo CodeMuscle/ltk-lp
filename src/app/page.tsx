@@ -7,15 +7,20 @@ import ExploreCategories from "./(components)/ExploreCategories";
 import TestimonialSection from "./(components)/TestimonialSection";
 import OurStory from "./(components)/OurStory";
 import ProductsSection from "./(components)/ProductsSection";
+import {
+  asafoetidaProducts,
+  bestSellers,
+  milletProducts,
+} from "./(data)/homepage";
 
 export default function Home() {
   return (
     <section className="w-full mx-auto overflow-hidden">
       <HeroSection />
       <FeatureStrip />
-      <ProductsSection title={"Best Sellers"} />
-      <ProductsSection title={"Asafoetida"} />
-      <ProductsSection title={"Ready Mix Powder"} />
+      <ProductsSection data={bestSellers} title={"Best Sellers"} />
+      <ProductsSection data={asafoetidaProducts} title={"Asafoetida"} />
+      <ProductsSection data={milletProducts} title={"Ready Mix Powder"} />
       <ExploreCategories />
       <OurStory />
       <TestimonialSection />

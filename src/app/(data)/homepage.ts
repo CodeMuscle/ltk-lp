@@ -118,3 +118,63 @@ export const bestSellers = [
     quantity: "100g",
   },
 ];
+
+export const asafoetidaProducts = [
+  {
+    id: 1,
+    image: "/assets/asafoetida-powder.png",
+    name: "Asafoetida Powder",
+    slug: "/products/asafoetida-powder",
+    discount: "Rs. 60.00",
+    mrp: "80.00",
+    quantity: "50g",
+  },
+  {
+    id: 2,
+    image: "/assets/asafoetida-powder.png",
+    name: "Asafoetida Powder",
+    slug: "/products/asafoetida-powder",
+    discount: "Rs. 90.00",
+    mrp: "120.00",
+    quantity: "75g",
+  },
+  {
+    id: 3,
+    image: "/assets/asafoetida-powder.png",
+    name: "Asafoetida Powder",
+    slug: "/products/asafoetida-powder",
+    discount: "Rs. 120.00",
+    mrp: "160.00",
+    quantity: "100g",
+  },
+];
+
+export const milletProducts = [
+  {
+    id: 1,
+    image: "/assets/millet-front.png",
+    name: "Millet Instant Mix",
+    slug: "/products/millet-instant-mix",
+    discount: "Rs. 90.00",
+    mrp: "100.00",
+    quantity: "75g",
+  },
+  {
+    id: 2,
+    image: "/assets/millet-front.png",
+    name: "Millet Instant Mix",
+    slug: "/products/millet-instant-mix",
+    discount: "Rs. 130.00",
+    mrp: "160.00",
+    quantity: "100g",
+  },
+  {
+    id: 3,
+    image: "/assets/millet-front.png",
+    name: "Millet Instant Mix",
+    slug: "/products/millet-instant-mix",
+    discount: "Rs. 180.00",
+    mrp: "200.00",
+    quantity: "150g",
+  },
+];
