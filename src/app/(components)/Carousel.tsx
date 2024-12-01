@@ -21,11 +21,11 @@ export function CarouselSize() {
       opts={{
         align: "start",
       }}
-      plugins={[
-        Autoplay({
-          delay: 10000, // Adjust autoplay delay
-        }),
-      ]}
+      // plugins={[
+      //   Autoplay({
+      //     delay: 10000, // Adjust autoplay delay
+      //   }),
+      // ]}
       className="w-full max-w-7xl"
     >
       <CarouselContent>
@@ -60,9 +60,9 @@ export function CarouselSize() {
                     <button className="rounded-full w-full py-2 bg-[#84160A] border border-[#84160A] text-white font-normal text-lg text-center">
                       Bulk Order
                     </button>
-                    <button className="rounded-full w-full py-2 bg-white border border-[#000] text-black font-normal text-lg text-center">
+                    {/* <button className="rounded-full w-full py-2 bg-white border border-[#000] text-black font-normal text-lg text-center">
                       Add To Cart
-                    </button>
+                    </button> */}
                   </div>
                 </CardContent>
               </Card>
@@ -71,10 +71,10 @@ export function CarouselSize() {
         ))}
       </CarouselContent>
       {/* Carousel navigation buttons */}
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <CarouselPrevious />
         <CarouselNext />
-      </div>
+      </div> */}
     </Carousel>
   );
 }

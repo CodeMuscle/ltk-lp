@@ -215,12 +215,12 @@ const ProductPage = ({ params }: IProductPageProps) => {
                 >
                   Bulk Order
                 </Link>
-                <Link
+                {/* <Link
                   href={`/bulk-orders`}
                   className="rounded-full w-full py-2 bg-white border border-[#000] text-black font-normal text-lg text-center"
                 >
                   Add To Cart
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
