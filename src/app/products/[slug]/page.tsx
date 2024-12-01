@@ -11,6 +11,7 @@ import plusIcon from "../../../../public/assets/plus.svg";
 
 import { products } from "../../(data)/products";
 import ProductsSection from "@/app/(components)/ProductsSection";
+import { bestSellers } from "@/app/(data)/homepage";
 
 interface IProductPageProps {
   params: Promise<{ slug: string }>;
@@ -92,7 +93,7 @@ const ProductPage = ({ params }: IProductPageProps) => {
                       style={{
                         width: "100%",
                         minWidth: "300px",
-                        maxHeight: '400px',
+                        maxHeight: "400px",
                       }}
                     />
                   )}
@@ -293,7 +294,7 @@ const ProductPage = ({ params }: IProductPageProps) => {
           </div>
         </div>
 
-        <ProductsSection title={"Related Products"} />
+        <ProductsSection data={bestSellers} title={"Related Products"} />
       </div>
     </section>
   );
