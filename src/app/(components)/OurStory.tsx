@@ -23,9 +23,9 @@ const OurStory = () => {
               company in brand name and style of “LTK”, which serves the
               customers, enjoys expansion in the best quality, healthy food
               products with no added chemicals, preservatives, additives. All
-              the products are approved by laboratories.
+              the products are approved by laboratories.
             </p>
-            <div className="flex flex-row gap-24 items-center justify-between">
+            <div className="flex md:flex-row flex-col gap-8 md:gap-24 items-center justify-between">
               {qualities.map((quality) => (
                 <div
                   key={quality.id}
