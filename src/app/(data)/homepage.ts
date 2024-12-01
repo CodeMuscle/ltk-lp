@@ -83,7 +83,7 @@ export const bestSellers = [
   },
   {
     id: 2,
-    image: "/assets/millets-powder.png",
+    image: "/assets/millet-front.png",
     name: "Millet Instant Mix",
     slug: "/products/millet-instant-mix",
     discount: "Rs. 90.00",
@@ -92,7 +92,7 @@ export const bestSellers = [
   },
   {
     id: 3,
-    image: "/assets/millets-powder.png",
+    image: "/assets/millet-front.png",
     name: "Millet Instant Mix",
     slug: "/products/millet-instant-mix",
     discount: "Rs. 130.00",
@@ -110,7 +110,7 @@ export const bestSellers = [
   },
   {
     id: 5,
-    image: "/assets/millets-powder.png",
+    image: "/assets/millet-front.png",
     name: "Millet Instant Mix",
     slug: "/products/millet-instant-mix",
     discount: "Rs. 130.00",
